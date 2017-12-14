@@ -1,0 +1,22 @@
+#!/usr/bin/nodejs
+var http = require('http');
+
+serverIP = '127.0.0.1';
+serverPort = 8080;
+httpStatus = 200
+
+// function which handles requests and sends response
+function handleRequest(request, response) {
+  console.log("Got request: " + request.method + " " + request.url);
+  //response.writeHead(200);
+  response.end("V1 of HTTP App Got request from " + request.url + '\n');
+}
+
+// create server
+var server = http.createServer(handleRequest);
+
+// and start listening on the specified IP and port
+server.listen(serverPort, serverIP, function() {
+  //Callback triggered when server is successfully listening. Hurray!
+  console.log("Server listening on: http://" + serverIP + ":" + serverPort);
+});
