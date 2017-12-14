@@ -1,7 +1,7 @@
-#!/usr/bin/nodejs
+#!/usr/local/bin/node
 var http = require('http');
 
-serverIP = '127.0.0.1';
+serverIP = '0.0.0.0';
 serverPort = 8080;
 httpStatus = 200
 
