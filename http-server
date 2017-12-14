@@ -9,7 +9,7 @@ httpStatus = 200
 function handleRequest(request, response) {
   console.log("Got request: " + request.method + " " + request.url);
   //response.writeHead(200);
-  response.end("V1 of HTTP App Got request from " + request.url + '\n');
+  response.end("V2 of HTTP App Got request from " + request.url + '\n');
 }
 
 // create server
